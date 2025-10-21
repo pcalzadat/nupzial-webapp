@@ -4,7 +4,7 @@ on:
     branches: [ main ]
     paths:
       - 'api/**'
-      - '.github/workflows/deploy-api-prod.yml'
+      - '.github/workflows/main_nupzial-api.yml'
 
 env:
   AZURE_WEBAPP_NAME: "nupzial-api"   # ej. api-tuapp
@@ -47,3 +47,4 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           package: .   # despliega SOLO la carpeta /api
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3EC64E3F2259438394A2EB57847EC4C8 }}
+
