@@ -1,5 +1,6 @@
-fastapi
-uvicorn[standard]
+fastapi>=0.110
+uvicorn[standard]>=0.25
+gunicorn>=21.2
 python-dotenv
 msal
 azure-storage-blob
@@ -11,4 +12,3 @@ pillow
 moviepy
 imageio-ffmpeg
 opencv-python-headless
-gunicorn
