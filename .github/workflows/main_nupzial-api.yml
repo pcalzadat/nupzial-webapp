@@ -39,8 +39,8 @@ jobs:
       # Empaquetar SOLO /api para que quede en la raíz del sitio al desplegar
       - name: Package /api as artifact
         run: |
-          cd ..
-          zip -r api.zip api \
+          cd api
+          zip -r ../api.zip . \
             -x "api/__pycache__/*" \
                "api/.pytest_cache/*" \
                "api/.venv/*" \
@@ -71,3 +71,4 @@ jobs:
           slot-name: 'Production'
           package: 'api.zip'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3EC64E3F2259438394A2EB57847EC4C8  }}
+
